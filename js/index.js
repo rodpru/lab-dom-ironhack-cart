@@ -19,7 +19,7 @@ function calculateAll() {
   // updateSubtotal(singleProduct);
   // end of test
 
-  // ITERATION 2
+  // ITERATION 2 & ITERATION 3
   let total = 0;
   let totalSum = document.querySelector('#total-value span');
   let allCartSubtotal = document.getElementsByClassName('product');
@@ -30,12 +30,6 @@ function calculateAll() {
     return totalSum.innerHTML = total;
   });
 
-  //... your code goes here
-
-  // ITERATION 3
-
-
-  //... your code goes here
 }
 
 // ITERATION 4
@@ -43,6 +37,19 @@ function calculateAll() {
 function removeProduct(event) {
   const target = event.currentTarget;
   console.log('The target in remove is:', target);
+  let itemList = document.querySelector('#cart tbody');
+  itemList.removeChild(target.parentNode.parentNode);
+
+  // let parentRow = document.getElementsByTagName('tr');
+  // let parentRowArray = [..parentRow];
+  // parentRowArray.forEach((row) => {
+  //   row.onclick = (event) => {
+  //     event.currentTarget.remove();
+  //   } 
+  // });
+
+
+
   //... your code goes here
 }
 
